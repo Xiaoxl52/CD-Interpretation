@@ -8,6 +8,9 @@ select some mainstream methods to do some simple comparative experiments on this
 details：“**Zheng X T, Xiao X L, Chen X M, Lu W X, Liu X Y and Lu X Q. 2023. Advancements in cross-domain remote sensing scene interpretation research.** **Journal of Image and Graphics**. ”
 # Benchmark：
   We give the corresponding cross-domain setup datasets based on two different decoding tasks-scene recognition, target recognition, respectively
+  
   1.scene recognition：
     Six datasets were selected as components of our benchmark dataset：[BigEarthNet](http://bigearth.net/)、[RIS-CB](https://github.com/lehaifeng/RSI-CB)、[Optimal-31](http://crabwq.github.io/)、[UC-Merced](http://weegee.vision.ucmerced.edu/datasets/landuse.html)、[WHU-RS19](http://captain.whu.edu.cn/datasets/WHU-RS19.zip)、[PatternNet](https://sites.google.com/view/zhouwx/dataset)
+    We choose two datasets BigEarthNet and RIS-CB as standard target domains, and other four datasets Optimal-31, UC-Merced, WHU-RS19, and PatternNet are suggested as source domains for cross-domain scene recognition validation by constructing the source-target 
+domains
     

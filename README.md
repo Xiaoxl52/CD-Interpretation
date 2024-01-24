@@ -14,6 +14,7 @@ details：“**Zheng X T, Xiao X L, Chen X M, Lu W X, Liu X Y and Lu X Q. 2023. 
    
 Subsequently, the selected datasets were unified and organized to merge similar semantic classes. In order to further refine the experimental setup across domains, we organized the category labels of the above selected base datasets
 ![image](https://github.com/Xiaoxl52/Interpretation-of-cross-domain-remote-sensing-scenes/assets/149050649/5babe8be-e5eb-4c7d-aa67-492eb738196b)
-
+ ## 2.target recognition：
+ 
 
   

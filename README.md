@@ -15,20 +15,27 @@ details：“**Zheng X T, Xiao X L, Chen X M, Lu W X, Liu X Y and Lu X Q. 2023. 
 Subsequently, the selected datasets were unified and organized to merge similar semantic classes. In order to further refine the experimental setup across domains, we organized the category labels of the above selected base datasets
 ![image](https://github.com/Xiaoxl52/Interpretation-of-cross-domain-remote-sensing-scenes/assets/149050649/5babe8be-e5eb-4c7d-aa67-492eb738196b)
  ## 2.Target Recognition：
-  目标识别跨域设置主要包含可见光跨域目标识别设置、可见光-SAR跨域目标识别设置。
-  ### a.可见光跨域目标识别设置
-  由于不同的数据采集策略和遥感技术，各个遥感图像目标检测数据集在数据上存在显著的差异我们选择现有工作常用的三个数据集NWPU VHR-10、DIOR、HRRSD。
+  Target recognition cross-domain settings mainly include visible cross-domain target recognition settings, and visible-SAR cross-domain target recognition settings.
+  ### a.Visible cross-domain target recognition setup
+   Due to different data acquisition strategies and remote sensing technologies, there are significant data differences among the various remote sensing image target detection datasets We choose three datasets commonly used in existing work NWPU VHR-10, DIOR, and HRRSD.
  
   ![image](https://github.com/Xiaoxl52/Interpretation-of-cross-domain-remote-sensing-scenes/assets/149050649/276370da-2737-4e0f-a75a-abbe281cdc38)
   
-  我们将三个数据集的目标分布进行量化，进而选出最合适的源域数据集以及目标域数据集
+  We quantify the target distributions of the three datasets and thus select the most appropriate source domain dataset as well as the target domain dataset
+  
   ![image](https://github.com/Xiaoxl52/Interpretation-of-cross-domain-remote-sensing-scenes/assets/149050649/3f59568d-ff35-4e86-94ab-e8fd4a01660a)
 
-  从表中我们可以看出，在目标的分布上，三者存在较大差异但有着各自明显的特征。相对其他两个数据集，NWPU-VHR-10中目标的有着分布散目标小视角丰富的特点，并且NWPU VHR-10数据集的空间分辨率相较于DIOR、HRRSD数据集有较大的差异化，对检测的精度来说存在一定的挑战性，因此，我们建议选择NWPU-VHR-10为目标域数据集，而把DIOR与HRRSD作为源域。
+  From the table, we can see that in the distribution of the targets, the three datasets are quite different but have their own distinctive features. Relative to the other two datasets, the distribution of targets in NWPU-VHR-10 is characterized by the richness of scattered targets and small viewpoints, and the spatial resolution of the NWPU VHR-10   dataset is more differentiated than that of the DIOR and HRRSD datasets, which is challenging for the accuracy of the detection, so we suggest choosing NWPU-VHR-10 as the target domain dataset and DIOR and HRRSD as the source domain dataset. and DIOR and HRRSD as the source domain.
   
-  ### b.可见光-SAR跨域目标识别设置
-  在构建跨域设置时，我们尽可能选择成像差异巨大的两个数据集作为源域和目标域，使得跨域算法研究更加关注目标本身的认知信息，学习最能代表目标特性的知识。在对大量的论文进行调研之后，目标域选择两个SAR图像数据集，包括HRSID和SSDD；由于选取的目标数据集均为船舰目标的SAR图像为例，因此我们在选取源域目标数据集时应当考虑该属性，因此HRSC2016仅包含船舰目标的数据集可作为源域数据集之一，另一方面为了保证任务影响因素可控，源域数据集应当在除了模态不同的情况下其他属性如目标尺寸、分布状态等尽可能与目标域保持一致，因此我们通过对数据的分析选取了DIOR数据集以及HRRSD数据集作为可选数据集进行模型的有效性评估。表6中对各个数据集的样本属性进行了分析，最终我们建议HRSC2016→HRSID为一组实验设置，DIOR→SSDD为一组实验设置，而HRRSD数据由于其较低的空间分辨率可作为HRSID目标域的备选源域设置或各组的辅助数据集使用。
-  ![image](https://github.com/Xiaoxl52/Interpretation-of-cross-domain-remote-sensing-scenes/assets/149050649/33df9032-7088-417e-bde4-46e91a663716)
+  ### b.Visible-SAR cross-domain target recognition setup
+   When constructing the cross-domain setup, we choose two datasets with huge differences in imaging as source and target domains as much as possible, which makes the cross-domain algorithm research pay more attention to the cognitive information of the target itself and learn the knowledge that best represents the target characteristics. After 
+ researching a large number of papers, two SAR image datasets are selected for the target domain, including HRSID and SSDD; since the selected target datasets are all SAR images of ship targets as an example, we should consider this attribute when selecting the target dataset for the source domain, so the HRSC2016 dataset which contains only ship 
+ targets can be one of the source domain datasets, on the other hand, in order to ensure that the mission impact factors are controllable, the source domain dataset should be consistent with the target domain as much as possible in other attributes such as target size, distribution state, etc., except for the modal difference, so we selected the DIOR 
+ dataset and the HRRSD dataset as the optional dataset for the evaluation of the model's validity through the analysis of the data.
+  
+  ![image](https://github.com/Xiaoxl52/Interpretation-of-cross-domain-remote-sensing-scenes/assets/149050649/cb4bd296-0a10-49ac-89d3-4e3fc19b1467)
+
+   The sample properties of each dataset are analyzed in the table, and ultimately we recommend HRSC2016→HRSID as a set of experimental settings, DIOR→SSDD as a set of experimental settings, and the HRRSD data can be used as an alternative source domain setting for the HRSID target domains or as an auxiliary dataset for each group due to its lower spatial resolution.
 
   
     
